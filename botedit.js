@@ -1,13 +1,13 @@
 const { Telegraf } = require("telegraf");
 
-const bot = new Telegraf("5964057450:AAG4LYm7CtFsGsP8E8woqr1TIRyWN2pIf1k");
+const bot = new Telegraf("5560270744:AAFc-zD5muAuE5ILasQwAZ68cf6m7Mw2QUE");
 
 
 bot.on('edited_message', ctx => {
   let msg_id = ctx.editedMessage.message_id
   ctx.telegram.deleteMessage(ctx.chat.id, msg_id)
-  ctx.reply("لا يمكن التعديل ") 
-  console.log(msg_id);
+  ctx.reply( "@"+ctx.from.username +   ` /n/n لا يمكن التعديل  `)
+
 })
 
 bot.launch();
