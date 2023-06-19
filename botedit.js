@@ -9,7 +9,7 @@ bot.on('edited_message', ctx => {
 
   ctx.telegram.deleteMessage(ctx.chat.id, msg_id)
 
-ctx.reply( "@"+ctx.from.username +    لا تعدل يا ورع ممنوع )
+ctx.reply( "@"+ctx.from.username +  `  لا تعدل يا ورع ممنوع `)
 
 })
 
